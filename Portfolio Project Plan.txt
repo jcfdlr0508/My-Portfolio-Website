@@ -1,0 +1,14 @@
+Portfolio Projects:
+
+List to put:
+
+- Home: Inside home, put your brief introduction about yourself and your skills also add a photo of yourself either in the left or right side
+
+- About: here put your a short bio about yourself like where are you from and where did you graduate
+
+- Project: you should put show 6 best project so far (3 Programming Projects and 3 Graphic Design Projects)
+
+- Skills: Put both Programming and Graphics Design skills
+
+- Contact me: put your Facebook, Instagram, LinkedIn, and all of your freelance accounts
+
