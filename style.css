@@ -66,7 +66,7 @@ header {
 
 #home {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     min-height: 110vh;
     margin-left: 50px;
@@ -88,6 +88,8 @@ header {
 .home-content {
     display: flex;
     align-items: center;
+    justify-content: center; /* Optional: center horizontally */
+    gap: 360px;               /* Space between text and image */
     color: rgb(2, 2, 118);
     overflow: hidden;
 }
@@ -116,8 +118,6 @@ header {
     height: 400px;
     border-radius: 50%;
     display: block;
-    position: absolute;
-    right: 50px;
 }
 
 .links {
@@ -125,7 +125,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px; /* Space between multiple icons */
-    margin-left: 140px
 }
 
 .links i {
@@ -155,40 +154,42 @@ hr {
 }
 
 #about {
-    height: 109vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     position: relative;
+    scroll-margin-top: 50px;
 }
 
-.about-container{
+.about-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 0;
+}
+
+.about-content {
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-.about-content {
+    width: 100%;
+    height: 100%;
     color: rgb(2, 2, 118);
     overflow: hidden;
-    width: 100%;
-    max-height: 85vh;
-    height: 100vh;
 }
 
 .about-content-wrapper {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -60%);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 70px;
   width: 80%;
+  margin: 0 auto;
   opacity: 0;
-  transition: opacity 0.75s ease-in, transform 0.75s ease-in;
-}
-
-.about-content-wrapper.animate {
-  opacity: 1;
-  transform: translate(-50%, -50%);
+  transform: translateY(-40px);
+  transition: opacity 1s, transform 1s;
 }
 
 .about-content img {
@@ -209,89 +210,110 @@ hr {
     color: blue;
 }
 
-@keyframes scroll {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -70%); /* Start from above center */
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%); /* End at center */
-    }
-}
-
 #skills {
-    max-height: 85vh;
+    max-height: 855vh;
     height: 85vh;
     position: relative;
+    scroll-margin-top: 120px;
 }
 
-.skills-content{
-    display: flex;
-    height: 115vh;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center 
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.skills-content-box{
-    border: 1px solid #000; 
-    height: 79.5vh;
-    border-radius: 20px;;
+.skills-card:only-child,
+.skills-card:last-child:nth-child(odd) {
+  grid-column: span 2;
 }
 
-.skills-content-box h1{
-    height: max-content;
+.skills-card {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 12px;
+  width: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.skills-display{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.skills-card:hover {
+  transform: translateY(-5px);
 }
 
-.skill-card{
-    width: 185vh;
-    height: 69vh;
-    display: flex;
-    gap: 1px;
-    flex-direction: column;
-    justify-content: center;
+.skills-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(2, 2, 118);
 }
 
-.skill-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 40px;
-    justify-content: center;
-    align-items: center;
-}
 
 .skill-item {
     display: flex;
+    flex-direction: row;      /* Side by side: img | skill-item-progress */
+    align-items: center;      /* Vertically center both */
+    gap: 16px;                /* Space between img and progress */
+}
+
+.skill-item img{
+    display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
-    align-content: space-around;
-    justify-content: center;
-    flex-wrap: wrap;
-    
 }
 
-.skill-item label{
-    color: rgb(2, 2, 118);
-    width: 200px;
+.skill-item:last-child {
+  border-bottom: none;
+}
+
+.skill-item-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* Center skill name and level */
+    text-align: center;
+}
+
+.skill-level {
+  font-weight: bold;
+  color: #c40000;
+  width: 89px;
+  text-align: left;
+}
+
+.skill-item .skill-level {
+    font-size: 0.95em;
+    color: blue;         /* Or your preferred color */
+    margin-top: 2px;        /* Optional: space above level */
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns, adjust as needed */
+    gap: 12px; /* space between items */    
+    justify-items: center; /* Center items inside each grid cell */
+}
+
+.skill-name{
+    width: 89px;
     text-align: left;
-    display: block;
-    z-index: 0;
-}
-
-.skill-item progress{
     color: rgb(2, 2, 118);
 }
-
 /*  
     display: flex;
     align-items: center;
     justify-content: center;
 */
+
+.lnf-skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns, adjust as needed */
+    gap: 12px; /* space between items */    
+    justify-items: center; /* Center items inside each grid cell */
+}
+
+.skills-content-box {
+    max-height: 600px;      /* Adjust height as needed */
+}

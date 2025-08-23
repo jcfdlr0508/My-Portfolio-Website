@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.querySelector('.about-content-wrapper');
-    if (!wrapper) return;
+    const aboutWrapper = document.querySelector('.about-content-wrapper');
+    if (!aboutWrapper) return;
 
-    const observer = new IntersectionObserver(
-    entries => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            observer.unobserve(entry.target); // Remove observer after animation triggers
-        }
+            if (entry.isIntersecting) {
+                aboutWrapper.style.opacity = '1';
+                aboutWrapper.style.transform = 'none';
+                observer.unobserve(aboutWrapper);
+            }
         });
-    },
-    {
-        threshold: 0.2 // Trigger when 20% of the element is visible
-    }
-    );
+    }, { threshold: 0.2 });
 
-    observer.observe(wrapper);
+    observer.observe(aboutWrapper);
 });
