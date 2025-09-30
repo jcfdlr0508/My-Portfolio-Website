@@ -39,32 +39,88 @@ header {
     transition: background 0.2s, color 0.2s;
 }
 
-.navbar-button {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 .navbar-button button,
 .navbar-button a {
     border-radius: 10px;
     text-decoration: none;
-    color: #FFF;
-    background-color: blue;
+    color: #FFF; 
     border-style: none;
     padding: 10px;
 }
 
-.navbar-links a:hover {
-    background-color: rgb(2, 2, 118);
-    color: #FFF;
+.navbar-links a:last-child {
+  border-radius: 10px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: blue;
+  border: none;
+  padding: 10px;
 }
 
-.navbar-button button:hover,
-.navbar-button a:hover {
+.navbar-links a:hover,
+.navbar-links a:hover {
     background-color: rgb(1, 1, 101);
     transition: background 0.2s, color 0.2s;
+    color: white;
 }
+
+.sidebar{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding-top: 10px;
+  top: 60px;
+  background-color: white;
+  font-size: 24px;
+  width: 100%;
+  box-shadow: 5px 5px 5px gray;
+  margin-bottom: 10px;
+}
+
+.sidebar a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar a:hover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(1, 1, 101);
+  color: white;
+  width: 100%;
+
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+  color: blue;
+  margin-right: 20px;
+}
+
+.hamburger:hover{
+  background-color: rgb(1, 1, 101);
+  color: white;
+}
+
+.close{
+  display: none;
+  cursor: pointer;
+  color: blue;
+  margin-right: 20px;
+}
+
+.close:hover{
+  background-color: rgb(1, 1, 101);
+  color: white;
+}
+
 
 /* Home Section */
 #home {
@@ -76,6 +132,7 @@ header {
     /* Animation */
     animation: slideDown 0.75s ease-in;
 }
+
 
 @keyframes slideDown {
     from {
@@ -590,6 +647,130 @@ hr {
 
 /* For small laptops, notebooks tablets(landscape) */
 @media (min-width: 992px) and (max-width: 1200px){
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; 
+}
+
+  /*Navbar Section */
+  .navbar {
+      display: flex;
+      align-items: center;
+      box-shadow: 5px 5px 5px 5px gray;   
+  }
+
+  .navbar-title {
+      margin-left: 10px;
+      margin-right: 32px;
+  }
+
+  .navbar-title a {
+      color: blue;
+      text-decoration: none;
+  }
+
+  .navbar-links {
+      display: flex;
+      gap: 16px;
+      padding: 15px 0;
+      margin-left: auto;
+      margin-right: 16px;
+  }
+
+  .navbar-links a {
+      color: rgb(2, 2, 118);
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: background 0.2s, color 0.2s;
+  }
+
+  .navbar-button button,
+  .navbar-button a {
+      border-radius: 10px;
+      text-decoration: none;
+      color: #FFF; 
+      border-style: none;
+      padding: 10px;
+  }
+
+
+  .navbar-links a:last-child {
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links a:hover {
+      background-color: rgb(1, 1, 101);
+      transition: background 0.2s, color 0.2s;
+      color: white;
+  }
+
+  .sidebar{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 10px;
+    top: 60px;
+    background-color: white;
+    font-size: 24px;
+    width: 100%;
+    box-shadow: 5px 5px 5px gray;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .sidebar a:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    width: 100%;
+
+  }
+  .hamburger{
+    display: none;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .hamburger:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
+  .close{
+    display: none;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .close:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
   .home-content {
       display: flex;
       align-items: center;
@@ -634,6 +815,130 @@ hr {
 
 /* For tablets (portrait) */
 @media (min-width: 768px) and (max-width: 992px){
+    header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; 
+  }
+
+  /*Navbar Section */
+  .navbar {
+      display: flex;
+      align-items: center;
+      box-shadow: 5px 5px 5px 5px gray;   
+  }
+
+  .navbar-title {
+      margin-left: 10px;
+      margin-right: 32px;
+  }
+
+  .navbar-title a {
+      color: blue;
+      text-decoration: none;
+  }
+
+  .navbar-links {
+      display: none;
+      gap: 16px;
+      padding: 15px 0;
+      margin-left: auto;
+      margin-right: 16px;
+  }
+
+  .navbar-links a {
+      color: rgb(2, 2, 118);
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: background 0.2s, color 0.2s;
+  }
+
+  .navbar-button button,
+  .navbar-button a {
+      border-radius: 10px;
+      text-decoration: none;
+      color: #FFF; 
+      border-style: none;
+      padding: 10px;
+  }
+
+
+  .navbar-links a:last-child {
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links a:hover {
+      background-color: rgb(1, 1, 101);
+      transition: background 0.2s, color 0.2s;
+      color: white;
+  }
+
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 10px;
+    top: 50px;
+    background-color: white;
+    font-size: 24px;
+    width: 100%;
+    box-shadow: 5px 5px 5px gray;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .sidebar a:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    width: 100%;
+
+  }
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .hamburger:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
+  .close{
+    display: none;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .close:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
   .home-content {
       margin-top: 100px;
       display: flex;
@@ -720,6 +1025,130 @@ hr {
 }
 
 @media (min-width: 576px) and (max-width: 768px){
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; 
+  }
+
+  /*Navbar Section */
+  .navbar {
+      display: flex;
+      align-items: center;
+      box-shadow: 5px 5px 5px 5px gray;   
+  }
+
+  .navbar-title {
+      margin-left: 10px;
+      margin-right: 32px;
+  }
+
+  .navbar-title a {
+      color: blue;
+      text-decoration: none;
+  }
+
+  .navbar-links {
+      display: none;
+      gap: 16px;
+      padding: 15px 0;
+      margin-left: auto;
+      margin-right: 16px;
+  }
+
+  .navbar-links a {
+      color: rgb(2, 2, 118);
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: background 0.2s, color 0.2s;
+  }
+
+  .navbar-button button,
+  .navbar-button a {
+      border-radius: 10px;
+      text-decoration: none;
+      color: #FFF; 
+      border-style: none;
+      padding: 10px;
+  }
+
+
+  .navbar-links a:last-child {
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links a:hover {
+      background-color: rgb(1, 1, 101);
+      transition: background 0.2s, color 0.2s;
+      color: white;
+  }
+
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 10px;
+    top: 50px;
+    background-color: white;
+    font-size: 24px;
+    width: 100%;
+    box-shadow: 5px 5px 5px gray;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .sidebar a:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    width: 100%;
+
+  }
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .hamburger:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
+  .close{
+    display: none;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .close:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
   .home-content {
       margin-top: 100px;
       display: flex;
@@ -803,6 +1232,93 @@ hr {
 
 
 @media (max-width: 576px){
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; 
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 5px 5px gray;   
+  }
+
+  .navbar-title {
+      margin-left: 10px;
+      margin-right: 32px;
+  }
+
+  .navbar-links{
+    display: none;
+  }
+
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 10px;
+    top: 50px;
+    background-color: white;
+    font-size: 24px;
+    width: 100%;
+    box-shadow: 5px 5px 5px gray;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .sidebar a:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    width: 100%;
+
+  }
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .hamburger:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
+  .close{
+    display: none;
+    cursor: pointer;
+    color: blue;
+    margin-right: 20px;
+  }
+
+  .close:hover{
+    background-color: rgb(1, 1, 101);
+    color: white;
+  }
+
   .home-content {
       margin-top: 100px;
       display: flex;

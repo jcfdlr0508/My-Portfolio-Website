@@ -63,3 +63,22 @@ document.querySelectorAll(".projects-slideshow").forEach(slideshow => {
 });
 
 
+
+//Hamburger
+var sidebar = document.querySelector('.sidebar');
+var hamburger = document.querySelector('.hamburger');
+var close = document.querySelector('.close')
+
+
+hamburger.addEventListener("click", function(){
+  sidebar.style.display = "block";
+  hamburger.style.display = "none";
+  close.style.display = "block";
+});
+
+close.addEventListener("click", function(){
+  sidebar.style.display = "none";
+  hamburger.style.display = "block";
+  close.style.display = "none"
+  
+});
