@@ -5,6 +5,8 @@ header {
     z-index: 1000;
     background-color: white; 
 }
+
+/*Navbar Section */
 .navbar {
     display: flex;
     align-items: center;
@@ -64,12 +66,13 @@ header {
     transition: background 0.2s, color 0.2s;
 }
 
+/* Home Section */
 #home {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 110vh;
-    margin-left: 50px;
+
     /* Animation */
     animation: slideDown 0.75s ease-in;
 }
@@ -95,9 +98,10 @@ header {
 }
 
 .home-content h1 {
-    font-size: 70px;
+    font-size: 60px;
     color: rgb(2, 2, 118);
     margin-bottom: 10px;
+    text-align: center;
 }
 .home-text {
     margin-left: 150px; /* Add spacing between image and text */
@@ -152,7 +156,7 @@ hr {
     position: relative;
     bottom: 0;
 }
-
+/* About Section */
 #about {
     display: flex;
     justify-content: center;
@@ -198,11 +202,8 @@ hr {
     display: block;
 }
 
-.about-text {
-    display: flex;
-    flex-direction: column; 
+.about-text { 
     width: 60%;
-    justify-content: center;
     font-size: 20px;
 }
 
@@ -210,11 +211,17 @@ hr {
     color: blue;
 }
 
+/* Skills Section */
 #skills {
-    max-height: 855vh;
-    height: 85vh;
+    height: 125vh;
     position: relative;
     scroll-margin-top: 120px;
+}
+
+.skills-content{
+    opacity: 0;
+    transform: translateY(-50px); /* or translateX if you want horizontal */
+    transition: all 0.6s ease-out;
 }
 
 .skills-groups {
@@ -317,3 +324,638 @@ hr {
 .skills-content-box {
     max-height: 600px;      /* Adjust height as needed */
 }
+
+/*Projects Section */
+#projects {
+    max-height: 85vh;
+    height: 85vh;
+    position: relative;
+    scroll-margin-top: 120px;
+}
+
+.projects-groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.projects-content{
+    opacity: 0;
+    transform: translateY(-50px); /* or translateX if you want horizontal */
+    transition: all 0.6s ease-out;
+}
+
+/* .projects-card:only-child,
+.projects-card:last-child:nth-child(odd) {
+  grid-column: span 2;
+} */
+
+.projects-card {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 12px;
+  width: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.projects-card:hover {
+  transform: translateY(-5px);
+}
+
+.projects-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(2, 2, 118);
+}
+
+
+.projects-item {
+    display: flex;
+    flex-direction: row;      /* Side by side: img | skill-item-progress */
+    align-items: center;      /* Vertically center both */
+    gap: 16px;                /* Space between img and progress */
+}
+
+.projects-item-overview {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-item:last-child {
+  border-bottom: none;
+}
+
+.projects-item-progress {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-form {
+  color: #c40000;
+  width: 100%;
+  text-align: left;
+}
+
+.projects-item .projects-form {
+    font-size: 0.95em;
+    color: blue;         /* Or your preferred color */
+    margin-top: 2px;        /* Optional: space above level */
+}
+
+
+.projects-name{
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    color: rgb(2, 2, 118);
+}
+/*  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+*/
+
+.lnf-projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns, adjust as needed */
+    gap: 12px; /* space between items */    
+    justify-items: center; /* Center items inside each grid cell */
+}
+
+.projects-list{
+    position: relative
+}
+
+.projects-content-box {
+    max-height: 600px;      /* Adjust height as needed */
+}
+
+.projects-description{
+    text-align: left;
+}
+
+/* Container handles spacing between buttons */
+.projects-button {
+  display: flex;
+  gap: 50px;  
+  justify-content: center;
+}
+/* Each button handles spacing between icon and text */
+.projects-button > button {
+  display: flex;
+  align-items: center; /* vertically center icon & text */
+  gap: 8px;            /* small space between icon and text */
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-style: none;
+}
+
+/* First button style (Github) */
+.projects-button > button:first-of-type {
+  background-color: blue;
+  color: white;
+}
+
+.projects-button .figma-style {
+  background-color: #1E1E1E !important;
+  color: rgb(30, 30, 30); /* optional, for text */
+}
+
+.projects-button .figma-style:hover {
+  background-color: rgb(61, 61, 61) !important;
+  color: white; 
+}
+
+.projects-button > button:first-of-type:hover {
+  background-color: rgb(2, 2, 172);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+/* Second button style (Live Demo) */
+.projects-button > button:last-of-type {
+  background-color: white;
+  color: gray;
+  border: solid 1px gray;
+}
+
+.projects-button > button:last-of-type:hover {
+  background-color: rgb(220, 219, 219);
+  color: rgb(255, 255, 255);
+  border-style: none;
+  transition: all 0.2s ease;    
+}
+
+.projects-slideshow-prev,
+.projects-slideshow-next {
+  display: none; /* hidden by default */
+  cursor: pointer;
+  position: absolute;
+  top: 40%; /* center vertically */
+  transform: translateY(-50%);
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+/* Show arrows when hovering over the slideshow */
+.projects-slideshow:hover .projects-slideshow-prev,
+.projects-slideshow:hover .projects-slideshow-next {
+  display: block;
+}
+
+/* Position left and right */
+.projects-slideshow-prev {
+  left: 0;
+}
+
+.projects-slideshow-next {
+  right: 0;
+}
+
+.projects-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.projects-dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 10px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.projects-dot.active {
+  background-color: #717171; /* highlight active */
+}
+
+.projects-slideshow-images {
+  display: none; /* hide all slides by default */
+}
+
+.projects-slideshow-images:first-child {
+  display: block; /* show first one on load */
+}
+
+.projects-slideshow {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.projects-slideshow-wrapper {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.projects-slideshow-images {
+  flex: 0 0 100%; /* each slide takes 100% of container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-slideshow-images img {
+  width: 100%;
+  height: auto; /* keeps aspect ratio */
+  object-fit: cover; /* makes all slides look uniform */
+}
+
+.text-primary{
+  color: rgb(2, 2, 118) !important;
+}
+
+/* For small laptops, notebooks tablets(landscape) */
+@media (min-width: 992px) and (max-width: 1200px){
+  .home-content {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Optional: center horizontally */
+      gap: 120px;               /* Space between text and image */
+      color: rgb(2, 2, 118);
+      overflow: hidden;
+  }
+
+  .home-content h1 {
+      font-size: 30px;
+      color: rgb(2, 2, 118);
+      margin-bottom: 10px;
+      text-align: center;
+  }
+  .home-text {
+      margin-left: 150px; /* Add spacing between image and text */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .home-content h3{
+      display: block;
+      font-size: 20px;
+      color: blue;
+      text-align: center;
+  }
+
+  .home-content img{
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin-right: 10px
+  }
+
+  .about-text {
+    width: 80%;
+    font-size: 15px;
+  }
+}
+
+/* For tablets (portrait) */
+@media (min-width: 768px) and (max-width: 992px){
+  .home-content {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center; 
+      gap: 12px;               
+      color: rgb(2, 2, 118);
+      overflow: hidden;
+  }
+
+  .home-text {
+    margin-left: 0;
+    display: flex;
+  }
+
+  .home-content img{
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin-right: 10px
+  }
+
+  .about-content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+  }
+
+  .about-content img {
+    width: 300px;
+    height: 400px;
+    display: block;
+  }
+  .about-text { 
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 450px;
+    height: 400px;
+    display: block;
+  }
+
+  #skills {
+    height: 120vh;
+    position: relative;
+    scroll-margin-top: 120px;
+  }
+
+  .skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .skills-card {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 12px;
+    width: auto;
+    padding: 20px;
+  }
+
+  #projects {
+      max-height: 85vh;
+      height: 85vh;
+      position: relative;
+      scroll-margin-top: 120px;
+  }
+
+  .projects-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+  .home-content {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center; 
+      gap: 12px;               
+      color: rgb(2, 2, 118);
+      overflow: hidden;
+  }
+
+  .home-text {
+    margin-left: 0;
+    display: flex;
+  }
+
+  .home-content img{
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin-right: 10px
+  }
+
+  .about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .about-text { 
+    width: 80%;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 450px;
+    height: 400px;
+    display: block;
+  }
+
+  #skills {
+    height: 125vh;
+    position: relative;
+    scroll-margin-top: 120px;
+}
+
+  .skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .skills-card {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 12px;
+    width: auto;
+    padding: 20px;
+  }
+
+  #projects {
+      max-height: 85vh;
+      height: 85vh;
+      position: relative;
+      scroll-margin-top: 120px;
+  }
+
+  .projects-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+  }
+}
+
+
+@media (max-width: 576px){
+  .home-content {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center; 
+      gap: 12px;               
+      color: rgb(2, 2, 118);
+      overflow: hidden;
+  }
+
+  .home-text {
+    margin-left: 0;
+  }
+
+  .home-text h1{
+   font-size: 50px;
+  }
+
+  .home-content img{
+      width: 350px;
+      height: 300px;
+      border-radius: 50%;
+  }
+
+  .about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .about-text { 
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 350px;
+    height: 300px;
+    display: block;
+  }
+
+  #skills {
+    height: 160vh;
+    position: relative;
+    scroll-margin-top: 120px;
+  }
+  .skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .skills-card {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 12px;
+    width: auto;
+    padding: 20px;
+    padding-left: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+
+  .skills-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(2, 2, 118);
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;      /* Vertically center both */
+    gap: 4px;                /* Space between img and progress */
+    
+  }
+
+  .skill-item img{
+      display: flex;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+  }
+
+  .skill-item:last-child {
+    border-bottom: none;
+  }
+
+  .skill-item-progress {
+      display: flex;
+      flex-direction: column;
+      align-items: center;       /* Center skill name and level */
+      text-align: center;
+  }
+
+  .skill-name{
+    width: 89px;
+    text-align: left;
+    color: rgb(2, 2, 118);
+    font-size: 10pt;
+  }
+
+    .skill-level {
+      font-weight: bold;
+      color: #c40000;
+      width: 89px;
+      text-align: left;
+    }
+
+    .skill-item .skill-level {
+        font-size: 0.75em;
+        color: blue;         /* Or your preferred color */
+        margin-top: 2px;        /* Optional: space above level */
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 columns, adjust as needed */
+        gap: 2px; /* space between items */    
+    }
+
+    .lnf-skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns, adjust as needed */
+    gap: 2px; /* space between items */    
+    justify-items: center; /* Center items inside each grid cell */
+  }
+
+  /*Projects Section */
+  #projects {
+      max-height: 85vh;
+      height: 85vh;
+      position: relative;
+      scroll-margin-top: 120px;
+  }
+
+  .projects-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+}
+
+/* @media (max-width: 376px){
+  #skills + hr {
+    display: none;
+  }
+} */

@@ -6,7 +6,7 @@ List to put:
 
 - About: here put your a short bio about yourself like where are you from and where did you graduate ✅
 
-- Skills: Put both Programming and Graphics Design skills
+- Skills: Put both Programming and Graphics Design skills ✅
 
 - Project: you should put show 6 best project so far (3 Programming Projects and 3 Graphic Design Projects)
 
