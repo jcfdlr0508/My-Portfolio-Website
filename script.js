@@ -64,21 +64,18 @@ document.querySelectorAll(".projects-slideshow").forEach(slideshow => {
 
 
 
-//Hamburger
 var sidebar = document.querySelector('.sidebar');
 var hamburger = document.querySelector('.hamburger');
-var close = document.querySelector('.close')
-
+var closeBtn = document.querySelector('.close');
 
 hamburger.addEventListener("click", function(){
-  sidebar.style.display = "block";
-  hamburger.style.display = "none";
-  close.style.display = "block";
+  sidebar.classList.add("active");
+  hamburger.classList.add("hide");
+  closeBtn.classList.add("active");
 });
 
-close.addEventListener("click", function(){
-  sidebar.style.display = "none";
-  hamburger.style.display = "block";
-  close.style.display = "none"
-  
+closeBtn.addEventListener("click", function(){
+  sidebar.classList.remove("active");
+  hamburger.classList.remove("hide");
+  closeBtn.classList.remove("active");
 });

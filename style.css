@@ -121,6 +121,17 @@ header {
   color: white;
 }
 
+.sidebar.active {
+  display: flex !important;
+}
+
+.hamburger.hide {
+  display: none !important;
+}
+
+.close.active {
+  display: block !important;
+}
 
 /* Home Section */
 #home {
