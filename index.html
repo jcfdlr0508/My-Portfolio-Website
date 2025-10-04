@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "yRnPW0hL1Llm3LJ5z",
+        });
+    })();
+    </script>
 </head>
 <body>
     <header>
@@ -15,21 +24,21 @@
         <nav class="navbar">
             <div class="navbar-title">
                 <h2>
-                <a href="#home">Portfolio</a>
+                <a href="#home">Jireh's Portfolio</a>
                 </h2>   
             </div>
             <div class="sidebar" style="display: none;">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#contactme">Contact Me</a>
+                <a href="#contact">Contact Me</a>
             </div>
             
             <div class="navbar-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#contactme">Contact Me</a>
+                <a href="#contact">Contact Me</a>
             </div>
             <div class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg></div>
             <div class="close"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></div>
@@ -209,7 +218,7 @@
                             <img src="./images/skill-logo/icons8-mongodb-240.png" alt="MongoDB Logo" height="50" width="50"> 
                             <div class="skill-item-progress">
                                 <span class="skill-name">MongoDB</span>
-                                <span class="skill-level">Begginer</span>
+                                <span class="skill-level">Beginner</span>
                             </div>
                         </div>
                     </div>
@@ -277,6 +286,7 @@
             </div>
         </section>
         <hr><br> 
+
         <!--Projects-->
         <section id="projects">
             <div class="projects-content">
@@ -632,7 +642,54 @@
                 </div>
             </div>
         </section>
+        <hr><br>
 
+        <!-- Contact Me -->
+        <section id="contact">
+            <div class="contact-content">
+                <div class="contact-groups">
+                    <div class="contact-details">
+                        <div class="contact-info">
+                            <h2>Contact Info</h2>
+                            <div class="contact-locations">
+                                <ul>
+                                    <li><i class="fa-solid fa-location-dot"></i><strong>Cavite, Philippines</strong></li>
+                                    <li><i class="fa-solid fa-envelope"></i><strong>jirehdlr237@gmail.com</strong></li>
+                                    <li><i class="fa-solid fa-phone"></i><span><strong>+63 970 660 2749</strong></span></li>
+                                    <li><i class="fa-brands fa-linkedin-in"></i><strong>Jireh Christopher De La Rosa</strong></li>
+                                    <div class="contact-links">
+                                        <a href="https://www.linkedin.com/in/jireh-christopher-de-la-rosa-a09878329/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="https://www.facebook.com/jdrosz"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https://github.com/jcfdlr0508"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-viber"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <h2>Contact Me</h2>
+                            <p>Feel free to tell your inquiries.</p>
+                            <label for="name"><strong>Name:</strong></label><br>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+
+                            <label for="subject"><strong>Subject:</strong></label><br>
+                            <input type="text" name="subject" id="subject" placeholder="Enter the subject" required><br>
+
+                            <label for="email"><strong>Email:</strong></label><br>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+
+                            <label for="message"><strong>Message:</strong></label><br>
+                            <textarea name="message" id="message" placeholder="Message" required></textarea><br>
+                            
+                            <input type="button" onclick="sendEmail()" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

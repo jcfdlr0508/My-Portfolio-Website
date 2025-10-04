@@ -15,12 +15,13 @@ header {
 
 .navbar-title {
     margin-left: 10px;
-    margin-right: 32px;
+
 }
 
 .navbar-title a {
     color: blue;
     text-decoration: none;
+    padding: 15px 0;
 }
 
 .navbar-links {
@@ -281,9 +282,10 @@ hr {
 
 /* Skills Section */
 #skills {
-    height: 125vh;
-    position: relative;
-    scroll-margin-top: 120px;
+  min-height: 100vh;
+  height: auto;
+  scroll-margin-top: 120px;
+  margin-bottom: 100px;
 }
 
 .skills-content{
@@ -389,17 +391,14 @@ hr {
     justify-items: center; /* Center items inside each grid cell */
 }
 
-.skills-content-box {
-    max-height: 600px;      /* Adjust height as needed */
-}
-
 /*Projects Section */
 #projects {
-    max-height: 85vh;
-    height: 85vh;
-    position: relative;
-    scroll-margin-top: 120px;
+  min-height: 100vh;
+  height: auto;
+  scroll-margin-top: 120px;
+  margin-bottom: 100px;
 }
+
 
 .projects-groups {
   display: grid;
@@ -499,12 +498,9 @@ hr {
     position: relative
 }
 
-.projects-content-box {
-    max-height: 600px;      /* Adjust height as needed */
-}
-
 .projects-description{
     text-align: left;
+    color: rgb(2, 2, 118);
 }
 
 /* Container handles spacing between buttons */
@@ -652,12 +648,171 @@ hr {
   object-fit: cover; /* makes all slides look uniform */
 }
 
+#contact {
+  /* display: none; */
+  min-height: 100vh;
+  height: auto;
+  scroll-margin-top: 120px;
+}
+
+.contact-content{
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 1s, transform 1s;
+}
+
+.contact-details{
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+}
+
+.contact-info h2{
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(2, 2, 118);
+}
+
+
+.contact-locations ul{
+  height: 100% ;
+  margin-top: 100px;
+  list-style-type: none;
+}
+
+.contact-locations strong{
+  font-size: 20px;
+  color: rgb(2, 2, 118);
+}
+
+.contact-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 30px 10px;
+}
+
+.contact-details:hover,
+.contact-form:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s;
+}
+
+.contact-locations i {
+  color: blue;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.contact-locations li{
+  margin: 30px 0;
+}
+
+.contact-links {
+  margin: 10px 0;
+  gap: 5px; /* Space between multiple icons */
+}
+
+.contact-links i {
+  color: blue;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 11px;
+}
+
+.contact-links i:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 1.0s ease;
+}
+
+.contact-links .fa-facebook-f {
+  padding: 11px 15px;;
+}
+
+.contact-form{
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-bottom: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin: 20px;
+  color: rgb(2, 2, 118);
+}
+
+.contact-form p{
+  margin-left: 20px;
+}
+
+.contact-form label{
+  margin-left:20px;
+  font-size: large;
+  color: rgb(2, 2, 118);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  margin: 10px 20px;
+  width: 90%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #4a4a4a;
+  border-radius: 10px;
+  color: rgb(2, 2, 118);
+}
+
+/* .contact-form input:focus,
+.contact-form textarea:focus {
+  color: rgb(2, 2, 118);
+} */
+
+.contact-form textarea {
+  color: rgb(2, 2, 118);
+  padding: 10px;
+  margin: 10px 20px;
+  width: 90%;
+  height: 200px;
+  border-radius: 10px;
+  resize: none;
+}
+
+.contact-form input[type="button"] {
+  margin: 20px 20px;
+  padding: 10px 20px; /* Add better padding */
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 90%;
+}
+
+.contact-form input[type="button"]:hover{
+  background-color: rgb(2, 2, 118);;
+  color: white;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-form p{
+    color: blue;
+}
+
 .text-primary{
   color: rgb(2, 2, 118) !important;
 }
 
 /* For small laptops, notebooks tablets(landscape) */
 @media (min-width: 992px) and (max-width: 1200px){
+  html{
+    width: 100%;
+  }
+
   header {
     position: fixed;
     top: 0;
@@ -822,6 +977,25 @@ hr {
     width: 80%;
     font-size: 15px;
   }
+
+  #skills {
+  min-height: 0;
+  height: auto;
+  scroll-margin-top: 120px;
+  margin-bottom: 100px;
+  }
+
+  #projects{
+    min-height: 0;
+  }
+
+  #contact {
+  /* display: none; */
+  min-height: 0;
+  height: auto;
+  scroll-margin-top: 120px;
+  }
+
 }
 
 /* For tablets (portrait) */
@@ -999,8 +1173,8 @@ hr {
   }
 
   #skills {
-    height: 120vh;
-    position: relative;
+    min-height: 100vh;
+    height: auto;
     scroll-margin-top: 120px;
   }
 
@@ -1020,18 +1194,29 @@ hr {
     width: auto;
     padding: 20px;
   }
-
+/* 
   #projects {
       max-height: 85vh;
       height: 85vh;
       position: relative;
       scroll-margin-top: 120px;
-  }
+  } */
 
   .projects-groups {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+  }
+
+  #contact {
+    /* display: none; */
+    min-height: 100vh;
+    height: auto;
+    scroll-margin-top: 120px;
+  }
+
+  .contact-groups {
+    display: block;
   }
 }
 
@@ -1226,18 +1411,22 @@ hr {
     padding: 20px;
   }
 
-  #projects {
+  /* #projects {
       max-height: 85vh;
       height: 85vh;
       position: relative;
       scroll-margin-top: 120px;
-  }
+  } */
 
   .projects-groups {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-top: 30px;
+  }
+
+  .contact-groups {
+    display: block;
   }
 }
 
@@ -1376,10 +1565,12 @@ hr {
   }
 
   #skills {
-    height: 160vh;
-    position: relative;
+    min-height: 100vh;
+    height: auto;
     scroll-margin-top: 120px;
+    margin-bottom: 50px;
   }
+
   .skills-groups {
     display: flex;
     flex-direction: column;
@@ -1466,10 +1657,10 @@ hr {
 
   /*Projects Section */
   #projects {
-      max-height: 85vh;
-      height: 85vh;
-      position: relative;
-      scroll-margin-top: 120px;
+    min-height: 100vh;
+    height: auto;
+    scroll-margin-top: 120px;
+    margin-bottom: 50px;
   }
 
   .projects-groups {
@@ -1479,8 +1670,42 @@ hr {
     margin-top: 30px;
   }
 
-}
+  .contact-groups {
+    display: block
+  }
 
+  .contact-details{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+  }
+
+  .contact-details{
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  }
+
+  .contact-info h2{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(2, 2, 118);
+  }
+
+
+  .contact-locations ul{
+    height: 100% ;
+    margin-top: 50px;
+    list-style-type: none;
+  }
+
+  .contact-locations strong{
+    font-size: 20px;
+    color: rgb(2, 2, 118);
+  }
+}
 /* @media (max-width: 376px){
   #skills + hr {
     display: none;

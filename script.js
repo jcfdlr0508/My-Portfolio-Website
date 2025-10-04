@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.about-content-wrapper, .skills-content, .projects-content');
+    const sections = document.querySelectorAll('.about-content-wrapper, .skills-content, .projects-content, .contact-content');
     if (!sections.length) return;
 
     const observer = new IntersectionObserver(entries => {
@@ -79,3 +79,28 @@ closeBtn.addEventListener("click", function(){
   hamburger.classList.remove("hide");
   closeBtn.classList.remove("active");
 });
+
+function sendEmail() {
+  let form = document.getElementById("contact-form");
+
+  // check if form is valid first
+  if (!form.checkValidity()) {
+    form.reportValidity(); // show validation errors
+    return; // stop here, don’t send email
+  }
+
+  let params = {
+    name: document.getElementById("name").value,
+    subject: document.getElementById("subject").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  emailjs.send("service_0z04t0c", "template_doze0v6", params)
+    .then(function(response) {
+      alert("Email Sent!");
+      form.reset(); // clear after success
+    }, function(error) {
+      alert("Failed to send: " + JSON.stringify(error));
+    });
+}
