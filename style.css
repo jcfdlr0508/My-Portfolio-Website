@@ -14,8 +14,9 @@ header {
 }
 
 .navbar-title {
-    margin-left: 10px;
-
+  padding-top: 5px;
+  margin-left: 10px;
+  margin-right: 32px;
 }
 
 .navbar-title a {
@@ -829,9 +830,10 @@ hr {
   }
 
   .navbar-title {
-      margin-left: 10px;
-      margin-right: 32px;
-  }
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 32px;
+  }   
 
   .navbar-title a {
       color: blue;
@@ -918,6 +920,7 @@ hr {
     cursor: pointer;
     color: blue;
     margin-right: 20px;
+
   }
 
   .hamburger:hover{
@@ -1016,8 +1019,9 @@ hr {
   }
 
   .navbar-title {
-      margin-left: 10px;
-      margin-right: 32px;
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 32px;
   }
 
   .navbar-title a {
@@ -1237,8 +1241,9 @@ hr {
   }
 
   .navbar-title {
-      margin-left: 10px;
-      margin-right: 32px;
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 32px;
   }
 
   .navbar-title a {
@@ -1447,8 +1452,9 @@ hr {
   }
 
   .navbar-title {
-      margin-left: 10px;
-      margin-right: 32px;
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 32px;
   }
 
   .navbar-links{
