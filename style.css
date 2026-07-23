@@ -162,7 +162,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; /* Optional: center horizontally */
-    gap: 360px;               /* Space between text and image */
+    gap: 250px;               /* Space between text and image */
     color: rgb(2, 2, 118);
     overflow: hidden;
 }
@@ -514,6 +514,7 @@ hr {
 .projects-button > button {
   display: flex;
   align-items: center; /* vertically center icon & text */
+  justify-content: center;
   gap: 8px;            /* small space between icon and text */
   padding: 10px 20px;
   border-radius: 8px;
@@ -522,11 +523,7 @@ hr {
   border-style: none;
 }
 
-/* First button style (Github) */
-.projects-button > button:first-of-type {
-  background-color: blue;
-  color: white;
-}
+
 
 .projects-button .figma-style {
   background-color: #1E1E1E !important;
@@ -549,6 +546,7 @@ hr {
   background-color: white;
   color: gray;
   border: solid 1px gray;
+  width: 80%;
 }
 
 .projects-button > button:last-of-type:hover {
